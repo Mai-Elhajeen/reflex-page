@@ -56,6 +56,7 @@ nav .icon {
     font-size: 24px;
     font-weight: bold;
     color: #fff;
+    cursor: pointer;
 }
 
 .home {
@@ -63,14 +64,18 @@ nav .icon {
     align-items: center;
     width: 100%;
     padding-top: 48px;
+    justify-content: center;
 }
 .img-home {
-    flex-basis: 50%;
+    flex-basis: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img-home img{
-    width: 100%;
-    height: 325px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
 }
 
@@ -96,16 +101,6 @@ main section {
 
 section.features {
     background: #ededed;
-}
-
-section h2::before {
-    position: absolute;
-    top: 40px;
-    left: 45%;
-    content: '';
-    width: 100px;
-    height: 2px;
-    background: #202020;
 }
 
 h2.title {
@@ -155,7 +150,12 @@ p.sub-title {
     height: 1px;
     background: #202020;
 }
-
+.right-line.center-line {
+    margin: auto;
+    margin-bottom: 24px;
+    height: 2px;
+    width: 100px;
+}
 .description {
     color: #7b7b7b;
     font-size: 15px;
@@ -167,12 +167,6 @@ p.sub-title {
     text-align: center;
 }
 
-/* .description button {
-    background: #ededed;
-    color: #7b7b7b;
-    border-color: #7b7b7b;
-    width: 100px;
-} */
 
 .content-details {
     margin-top: 40px;
@@ -247,11 +241,18 @@ p.sub-title {
 .banner .info button {
     color: #ededed;
 }
+
+.banner .right-line.center-line {
+    background: #ededed;
+}
 .banner .info h2::before {
     background: #ededed;
 }
 .banner .info button {
     border-color: #ededed;
+}
+.banner .info button:hover{
+    border-color: transparent;
 }
 .banner .info h2 {
     margin-bottom: 16px;
@@ -279,7 +280,7 @@ input {
     padding-left: 8px;
     outline: none;
     border-radius: 8px;
-    border: 1px solid #000;
+    border: 1px solid #202020;
     width: 100%;
 }
 input#name {
@@ -290,7 +291,7 @@ textarea {
     height: 120px;
     outline: none;
     border-radius: 8px;
-    border: 1px solid #000;
+    border: 1px solid #202020;
     padding-left: 8px;
     margin-top: 16px;
     padding-top: 8px;
@@ -314,6 +315,7 @@ textarea {
     cursor: pointer;
     margin-right: 8px;
     transition: all .3s;
+    font-size: 20px;
 }
 .social-icon:hover {
     background: #202020;
@@ -333,4 +335,105 @@ textarea {
 .footer a {
     color: #202020;
     font-weight: bold;
+}
+
+
+/* responsive || Media Query */
+@media (max-width: 900px) {
+    .img-home {
+        flex-basis: 30%;
+    }
+    .content-home {
+        flex-basis: 70%;
+        padding: 0;
+    }
+    .img-home img {
+        width: 250px;
+        height: 250px;
+    }
+    .qualification .right-line{
+        display: none;
+    }
+    .qualifications {
+        flex-wrap: wrap;
+    }
+    .qualification {
+        margin: 0 8px;
+    }
+    p.sub-title {
+        width: 100%;
+    }
+    .info {
+        padding: 0;
+    }
+}
+@media (max-width: 600px) {
+    button {
+        width: 100%;
+    }
+    header.header {
+        padding: 16px 24px;
+    }
+    .home {
+        flex-direction: column;
+        padding: 0;
+    }
+    .content-home {
+        flex-basis: 70%;
+        margin-bottom: 32px;
+        text-align: center;
+    }
+    .img-home img {
+        width: 250px;
+        height: 250px;
+    }
+    .content-home h1 {
+        font-size: 38px;
+    }
+    .content-home p {
+        font-size: 12px;
+    }
+
+    main section {
+        padding: 56px 32px;
+    }
+    .qualifications {
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .qualifications .right-line {
+        display: none;
+    }
+    p.sub-title {
+        width: 100%;
+    }
+    .info-details {
+        flex-direction: column;
+    }
+    .info {
+        align-items: center;
+        margin-bottom: 24px;
+    }
+    .even .info {
+        order: 0;
+    }
+    .banner h2.title {
+        font-size: 30px;
+    }
+    .banner .description, .banner .info {
+        padding: 0;
+    }
+    section.contact {
+        flex-direction: column;
+    }
+    
+    .contact .sub-title{
+        text-align: center;
+    }
+    .info .sub-title {
+        text-align: center;
+    }
+    .banner h2.title {
+        font-size: 24px;
+    }
 }
