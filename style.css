@@ -256,3 +256,59 @@ p.sub-title {
 .banner .info h2 {
     margin-bottom: 16px;
 }
+
+section.contact {
+    display: flex;
+    justify-content: space-between;
+}
+
+form.form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+} 
+.inputs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+input {
+    height: 32px;
+    padding-left: 8px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #000;
+}
+input#name {
+    margin-right: 8px;
+}
+textarea {
+    width: 100%;
+    height: 120px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid #000;
+    padding-left: 8px;
+    margin-top: 16px;
+    padding-top: 8px;
+}
+
+.contact p.description {
+    text-align: left;
+}
+
+.contact h2::before {
+    left: 12%;
+}
+
+.social-media {
+    margin-top: 24px;
+}
+.social-icon {
+    padding: 8px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 8px;
+}
